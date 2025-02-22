@@ -4,6 +4,9 @@ import pandas as pd
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "FastAPI Crop Price Prediction API is Running!"}
 # Load trained model
 model = joblib.load("xgboost_multioutput.pkl")
 
